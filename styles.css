@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #ff6347; /* nuance d'orange */
+    color: black; /* changer la couleur du texte en noir */
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* s'assurer que la bannière est au-dessus du contenu */
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: black; /* changer la couleur des liens en noir */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+#content {
+    flex: 1;
+    padding-bottom: 60px; /* Ajoute de l'espace en bas pour le footer */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+#stations {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#stations > div {
+    background-image: url(http://benlevywebdesign.com/somafm/images/SomaFMrecord.png);
+    background-repeat: no-repeat;
+    height: 220px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    width: calc(50% - 20px);
+    margin-right: 20px;
+    cursor: pointer;
+    -webkit-transition: all .75s ease-in-out;
+    -moz-transition: all .75s ease-in-out;
+    transition: all .75s ease-in-out;
+}
+
+#stations > div:last-child {
+    margin-right: 0;
+}
+
+
+#stations .records1 {
+    background-image: url(https://f4.bcbits.com/img/a3552723016_16.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajuste l'image pour couvrir le conteneur */
+    height: 220px;
+    width: 220px;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    position: relative;
+
+    -webkit-transition: all .75s ease-in-out;
+    -moz-transition: all .75s ease-in-out;
+    transition: all .75s ease-in-out;
+}
+
+
+#stations .records {
+    background-image: url(https://f4.bcbits.com/img/a3888146380_16.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Ajuste l'image pour couvrir le conteneur */
+    height: 220px;
+    width: 220px;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+    position: relative;
+
+    -webkit-transition: all .75s ease-in-out;
+    -moz-transition: all .75s ease-in-out;
+    transition: all .75s ease-in-out;
+}
+
+#stations .records1:hover {
+    margin-left: -110px;
+}
+
+
+#stations .records:hover {
+    margin-left: -110px;
+}
+
+#stations h3 {
+    color: #FFF;
+    background-color: rgba(255, 255, 255, 0.45);
+    width: 200px;
+    margin-top: 0px;
+    margin-bottom: -5px;
+    padding: 10px 10px 3px;
+}
+
+#stations > div:hover .recordsinfo {
+    margin-left: 0;
+}
+
+#stations .recordsinfo {
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    position: absolute;
+    width: 150px;
+    bottom: 0;
+    margin: 5px 10px 5px -150px;
+
+    -webkit-transition: all .75s ease-in-out;
+    -moz-transition: all .75s ease-in-out;
+    transition: all .75s ease-in-out;
+}
+
+.bubble {
+    display: none;
+    position: absolute;
+    right: -300px;
+    top: 0;
+    width: 250px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    -webkit-transition: all .75s ease-in-out;
+    -moz-transition: all .75s ease-in-out;
+    transition: all .75s ease-in-out;
+}
+
+#stations > div.show-bubble .bubble {
+    display: block;
+    right: 220px; /* Position the bubble to the right of the div */
+}
+
+#shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#shop .item {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#shop .item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+#shop .item h3 {
+    margin: 10px 0 5px;
+}
+
+#shop .item p {
+    margin: 5px 0 10px;
+}
+
+#shop .item .buy-button {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#shop .item:hover .buy-button {
+    display: block;
+}
